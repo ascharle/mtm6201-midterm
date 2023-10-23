@@ -1,0 +1,1048 @@
+/* Reset and Base Styles */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Centering the Navigation Menu */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Removing Bullets */
+.navbar-nav {
+  list-style-type: none;
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Hover Animation for Menu Items */
+.nav-item {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-item:hover {
+  transform: scale(1.1); /* Scale up the item on hover */
+}
+
+
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  /*  Gradient background color  */
+  background: hsla(233, 100%, 90%, 1);
+
+background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+  background-color: #555;
+}
+
+/* Hero Section */
+.hero {
+    /*  Gradient background color  */
+  background: hsla(177, 100%, 49%, 1);
+
+background: linear-gradient(90deg, hsla(177, 100%, 49%, 1) 0%, hsla(266, 62%, 68%, 1) 50%, hsla(265, 68%, 45%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(177, 100%, 49%, 1) 0%, hsla(266, 62%, 68%, 1) 50%, hsla(265, 68%, 45%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(177, 100%, 49%, 1) 0%, hsla(266, 62%, 68%, 1) 50%, hsla(265, 68%, 45%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FAED", endColorstr="#A67BE0", GradientType=1 );
+  padding: 100px 0;
+  text-align: center;
+  /* background-image: url("../img/hero.png");
+  background-size: cover; */
+    height: 450px;
+    background-repeat: no-repeat;
+    position: relative;
+    /* background-position: center center; */
+}
+
+.hero h1 {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  margin-bottom: auto;
+}
+
+
+
+.hero p {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+      padding: 60px 0;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+/* General Styles */
+
+/* Center align text */
+.text-center {
+  text-align: center;
+}
+
+/* Services Section Styles */
+#service{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+}
+/* Container for all service cards - using flexbox for layout */
+.services-container {
+  display: flex;
+  gap: 30px; /* Space between service cards */
+  justify-content: center; /* Center align the service cards */
+  margin-bottom: 50px;
+}
+
+/* Individual Service Card Styles */
+.service-card {
+  flex: 1; /* Allows the card to grow and take available space */
+  max-width: 300px; /* Maximum width of the card */
+  border: 1px solid #ddd; /* Border around the card */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for the card */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Media Query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%; /* Set the card width to 100% on smaller screens */
+    margin-bottom: 20px; /* Add some margin to the bottom for spacing between stacked cards */
+  }
+}
+
+/* Hover effect for service card */
+.service-card:hover {
+  transform: scale(1.05); /* Scale the card slightly on hover */
+}
+
+/* Styles for the service image */
+.service-card img {
+  width: 100%; /* Full width of the parent container */
+  height: auto; /* Maintain the aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Styles for the service button */
+.service-card button {
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* No border for the button */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the service button */
+.service-card button:hover {
+  background-color: #0056b3; /* Darken the button color on hover */
+}
+
+/* Vision Section Styles */
+
+/* Container for vision content */
+.vision-container {
+  padding: 50px; /* Padding inside the container */
+  text-align: center; /* Center align the content */
+
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+#vision-button{
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+#vision-button:hover{
+  background-color: #0056b3;
+}
+
+/* Flex container to replace Bootstrap's row */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+}
+
+/* Flex items to replace Bootstrap's columns */
+.flex-item {
+  flex: 1;
+  margin: 10px;
+  flex-wrap: wrap;
+  max-width: 50%;  
+}
+#service{
+  display:grid;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+/* Specific styles for team details */
+.team-details {
+  flex-basis: 10%; /* Take up half the width by default */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .team-details {
+      flex-basis: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Contact section specific styles */
+.contact-section {
+  flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	font-family: Montserrat;
+}
+
+/* Main container for the content */
+.container {
+  width: 80%; /* Set the width to 80% of its parent */
+  height: 80%; /* Set the height to 80% of its parent */
+  display: grid; /* Use the grid layout */
+  justify-content: center; /* Center the content horizontally */
+  align-content: center; /* Center the content vertically */
+
+  /* Nested class for individual testimonial boxes */
+  .testimonial-box {
+      position: relative; /* Set to relative to allow for absolute positioning of child elements */
+      width: 500px; /* Set a fixed width */
+      height: 300px; /* Set a fixed height */
+
+      /* Pseudo-element for decorative circle on the top-left */
+      &::before {
+          content: ''; /* Required for pseudo-elements */
+          position: absolute; /* Absolute positioning */
+          top: 10px; /* Position from the top */
+          left: -100px; /* Position from the left */
+          width: 200px; /* Set a fixed width */
+          height: 200px; /* Set a fixed height */
+          border-radius: 50%; /* Make it a circle */
+          background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%), rgba(255, 255, 255, 0.8); /* Gradient background with a white overlay */
+          box-shadow: -5px 5px 10px rgba(0, 0, 0, .3); /* Add a shadow */
+          z-index: -1; /* Place it behind the main content */
+      }
+
+      /* Pseudo-element for decorative circle on the bottom-right */
+      &::after {
+          /* (Similar properties as the ::before pseudo-element, but positioned on the bottom-right) */
+          content: '';
+          position: absolute;
+          bottom: 10px;
+          right: -100px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%), rgba(255, 255, 255, 0.8);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+          z-index: -1;
+      }
+
+      /* Nested class for the main testimonial content */
+      .testimonial {
+          display: grid; /* Use the grid layout */
+          grid-template-rows: 1.3fr 0.7fr; /* Define two rows with different proportions */
+          box-shadow: 0 0 5px rgba(0, 0, 0, .5); /* Add a shadow */
+          width: 100%; /* Take up the full width of its parent */
+          height: 100%; /* Take up the full height of its parent */
+          background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); /* Gradient background */
+          padding: 10px 20px; /* Add padding */
+          position: relative; /* Set to relative to allow for absolute positioning of child elements */
+
+          /* Nested class for the icon (assuming Font Awesome is used) */
+          .fas {
+              position: absolute; /* Absolute positioning */
+              top: 0; /* Position at the top */
+              right: 0; /* Position at the right */
+              padding: 10px; /* Add padding */
+              font-size: 25px; /* Set font size */
+              color: #222; /* Set color */
+          }
+
+          /* Nested class for the testimonial text */
+          .testimonial-text {
+              font-size: 16px; /* Set font size */
+              line-height: 25px; /* Set line height */
+              text-align: center; /* Center the text */
+              padding: 25px 15px; /* Add padding */
+              width: 100%; /* Take up the full width of its parent */
+          }
+
+          /* Nested class for the user details (image + info) */
+          .testimonial-user {
+              display: flex; /* Use flex layout */
+              align-items: center; /* Align items vertically in the center */
+
+              /* Nested class for the user image */
+              .user-img {
+                  box-shadow: 0 0 10px rgba(0, 0, 0, .5); /* Add a shadow */
+                  width: 60px; /* Set a fixed width */
+                  height: 60px; /* Set a fixed height */
+                  border-radius: 50%; /* Make it a circle */
+              }
+
+              /* Nested class for the user's name and job details */
+              .user-info {
+                  margin: 0 20px; /* Add margin */
+                  display: grid; /* Use the grid layout */
+                  grid-template-rows: 1fr 1fr; /* Define two rows */
+
+                  /* Nested class for the user's name */
+                  .user-name {
+                      font-weight: 800; /* Bold font weight */
+                  }
+
+                  /* Nested class for the user's job details */
+                  .user-job-details {
+                      margin: 5px 0 0 0; /* Add margin */
+                      position: relative; /* Set to relative to allow for absolute positioning of child elements */
+                      display: flex; /* Use flex layout */
+                      justify-content: space-between; /* Space out the items evenly */
+
+                      /* Nested class for a decorative line */
+                      .line {
+                          position: absolute; /* Absolute positioning */
+                          width: 2px; /* Set a fixed width */
+                          height: 100%; /* Take up the full height of its parent */
+                          background: #000; /* Set background color */
+                          left: 50%; /* Position at the center horizontally */
+                          top: 0; /* Position at the top */
+                          transform: translateX(-50%); /* Center it horizontally */
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+#client{
+  margin-bottom: 20px;
+}
+
+/* Class for a support section or button, positioned at the bottom-right of the page */
+.support {
+  position: absolute; /* Absolute positioning */
+  right: 10px; /* Position from the right */
+  bottom: 10px; /* Position from the bottom */
+  padding: 10px; /* Add padding */
+  display: flex; /* Use flex layout */
+}
+
+/* Styles for anchor tags (links) */
+a {
+  margin: 0 10px; /* Add margin */
+  color: #fff; /* Set color */
+  font-size: 1.5rem; /* Set font size */
+  transition: all 400ms ease; /* Smooth transition for all properties */
+}
+
+/* Hover effect for anchor tags */
+a:hover {
+  color: #222; /* Change color on hover */
+}
+
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+a {
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  line-height: 25px;
+}
+
+.responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px 10px 50px;
+}
+
+.mainImg {
+  color: black;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.text-blk.headingText {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(176, 98, 255);
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.allText {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width: 40%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.text-blk.subHeadingText {
+  color: rgb(102, 102, 102);
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.text-blk.description {
+  font-size: 18px;
+  line-height: 26px;
+  color: rgb(102, 102, 102);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  font-weight: 400;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.explore {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgb(102, 102, 102);
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(102, 102, 102);
+  border-right-color: rgb(102, 102, 102);
+  border-bottom-color: rgb(102, 102, 102);
+  border-left-color: rgb(102, 102, 102);
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  cursor: pointer;
+  background-color: white;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 8px;
+  padding-right: 40px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+}
+
+.explore:hover {
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(176, 98, 255);
+  color: white;
+  border-top-width: initial;
+  border-right-width: initial;
+  border-bottom-width: initial;
+  border-left-width: initial;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+}
+
+.responsive-container-block.Container {
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.responsive-container-block.Container.bottomContainer {
+  flex-direction: row-reverse;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  position: static;
+}
+
+.allText.aboveText {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+}
+
+.allText.bottomText {
+  margin-top: 0px;
+  margin-right: 40px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 0px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.purpleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 430px;
+  background-color: rgb(176, 98, 255);
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  bottom: -35px;
+  left: -8%;
+}
+
+.purpleText {
+  font-size: 18px;
+  line-height: 26px;
+  color: white;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.ultimateImg {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+    max-width: 850px;
+  }
+
+  .mainImg {
+    width: 55%;
+    height: auto;
+  }
+
+  .allText {
+    width: 40%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+
+  .responsive-container-block.Container {
+    max-width: 830px;
+  }
+
+  .allText.aboveText {
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+  }
+
+  .allText.bottomText {
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  .text-blk.headingText {
+    text-align: center;
+  }
+
+  .allText.aboveText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .text-blk.subHeadingText {
+    text-align: left;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .text-blk.description {
+    text-align: left;
+    line-height: 24px;
+  }
+
+  .explore {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+  }
+
+  .responsive-container-block.Container {
+    justify-content: space-evenly;
+  }
+
+  .purpleBox {
+    bottom: 10%;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    max-width: 930px;
+  }
+
+  .allText.bottomText {
+    width: 40%;
+  }
+
+  .purpleBox {
+    bottom: auto;
+    left: -10%;
+    top: 70%;
+  }
+
+  .mainImg {
+    width: 100%;
+  }
+
+  .text-blk.headingText {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .allText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .responsive-container-block.Container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-blk.headingText {
+    text-align: center;
+  }
+
+  .text-blk.subHeadingText {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .text-blk.description {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .allText {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .allText.aboveText {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+
+  .allText.bottomText {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .mainImg {
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: -70px;
+    margin-left: 0px;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+    flex-direction: column;
+  }
+
+  .ultimateImg {
+    width: 100%;
+  }
+
+  .purpleBox {
+    position: static;
+  }
+
+  .allText.bottomText {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .text-blk.headingText {
+    text-align: left;
+  }
+
+  .text-blk.subHeadingText {
+    text-align: left;
+  }
+
+  .text-blk.description {
+    text-align: left;
+  }
+
+  .ultimateImg {
+    position: static;
+  }
+
+  .mainImg {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .ultimateImg {
+    position: relative;
+  }
+
+  .purpleBox {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    position: absolute;
+    left: 0px;
+    top: 80%;
+  }
+
+  .allText.bottomText {
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-container-block.Container {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mainImg {
+    width: 100%;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  .text-blk.subHeadingText {
+    font-size: 24px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 28px;
+  }
+
+  .text-blk.description {
+    font-size: 16px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 22px;
+  }
+
+  .allText {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  .allText.bottomText {
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding: 0 0 0 0;
+    margin: 30px 0 0 0;
+  }
+
+  .ultimateImg {
+    position: static;
+  }
+
+  .purpleBox {
+    position: static;
+  }
+
+  .stars {
+    width: 55%;
+  }
+
+  .allText.bottomText {
+    margin-top: 75px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .purpleText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .explore {
+    padding: 6px 35px 6px 35px;
+    font-size: 15px;
+  }
+}
